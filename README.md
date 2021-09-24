@@ -1,3 +1,3 @@
-# Automated Test Scenarios
+# Test Scenarios
 
 
