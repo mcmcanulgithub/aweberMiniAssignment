@@ -20,9 +20,7 @@ REQUIRED: Set the JUNIT_HOME as a system environment variable to be able to run 
 
 REQUIRED: Set the JAVA_HOME as a system environment variable to be able to run the java executables. This needs to give the path of your JDK installation on your machine. An example value could be the following - C:\Program Files\Unity\Hub\Editor\2021.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK 
 
-REQUIRED: Place the two image files named, p17bv6pi65kqsgs0 (1).png and p26kk7xa3jwu808c (1).png at the C drive location of the machine under test to be used as resources for the photo upload test.
-
-REQUIRED: Install the chromedriver exe for the version of chrome on the machine under test. The verion you need to download can be found at the following link. There are also instructions contained within on how this is to be used in the automated tests. For this task, we have went with approach #2 listed out under the setup section and if extending this framework, same pattern can be followed. We placed the exe at the same location as the eclipse workspace for simplicity on this task, and whatever machine this framework is run on would need to have the chromedriver exe in the directory that matches the line of java code in the @before junit method that sets the system property for the chrome driver - [Guide](https://chromedriver.chromium.org/getting-started)
+REQUIRED: Install the chromedriver exe for the version of chrome on the machine under test. The verion you need to download can be found at the following link. There are also instructions contained within on how this is to be used in the automated tests. For this task, we have went with approach #1 listed out under the setup section and if extending this framework, same pattern can be followed. We placed the exe at the same location as the eclipse workspace for simplicity on this task, and whatever machine this framework is run on would need to have the chromedriver exe in the directory that matches the line of java code in the @before junit method that sets the system property for the chrome driver - [Guide](https://chromedriver.chromium.org/getting-started)
 
 ## Important Commands For Developers
 
@@ -32,7 +30,7 @@ this will set the system environment variable on linux. same pattern can be foll
 
 > mvn clean install
 
-takes the project’s Java source code, compiles it, tests it and converts it into an executable Java program: a .jar file in this case. This kind of command can be used from a CI/CD loop in a jenkins job or be used to execute the tests on the command line independent of the IDE used to build this, Eclipse. This command pulls down all the dependencies in the process so will need to be used when the project is imported the first time during local development such as if this framework were to be modified.
+takes the projectâ€™s Java source code, compiles it, tests it and converts it into an executable Java program: a .jar file in this case. This kind of command can be used from a CI/CD loop in a jenkins job or be used to execute the tests on the command line independent of the IDE used to build this, Eclipse. This command pulls down all the dependencies in the process so will need to be used when the project is imported the first time during local development such as if this framework were to be modified.
 
 There are more commands should the developer wish to run a subset of all the tests from the command line. See the following if interested - [commands](https://www.baeldung.com/junit-run-from-command-line)
 
